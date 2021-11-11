@@ -1,0 +1,37 @@
+.banner-img{
+    height:570px;
+    
+}
+.banner-section{
+    background: rgb(36, 32, 32);
+}
+.banner-section img{
+    opacity:0.5;
+}
+
+.banner-description{
+    color:#fff;
+    margin-right:20em;
+    margin-bottom:10em;
+    
+}
+.short-description{
+    color: rgb(223, 103, 34);
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.banner-description h5{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.banner-description p{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-description h5{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+  }
