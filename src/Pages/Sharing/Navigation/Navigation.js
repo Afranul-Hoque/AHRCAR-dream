@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navigation.css'
+import './Navigation.css';
+import useAuth from '../../../Hooks/useAuth'
 
 
 const Navigation = () => {
+    // const { user } = useAuth();
+
+    const { user, logOut } = useAuth();
     return (
         <div className="navigation-section">
 
@@ -23,19 +27,21 @@ const Navigation = () => {
 
                             <Link to="/manageorder" className=" text-white nav-link ">Manage-Order</Link>
 
-                            <Link to="/gallery" className=" text-white nav-link ">Gallery</Link>
-                            {/* 
-                            {
+                            {/* <Link to="/login" className=" text-white nav-link ">Login</Link> */}
+
+                            {/* {
                                 user.email && <span><Link to="/home" className="nav-link active">{user.displayName}</Link></span>
-                            }
+                            } */}
 
                             {
-                                user.email ?
-                                    <Link to="/home" onClick={logoutUsingGoogle} className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
+                                user?.email ?
+                                    <Link to="/home" className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
 
                                     :
                                     <Link to="/login" className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Login</Link>
-                            } */}
+                            }
+
+
 
                         </ul>
 

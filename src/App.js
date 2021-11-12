@@ -9,27 +9,38 @@ import {
 import Home from './Pages/Home/Home/Home';
 import Explore from './Pages/Explore/Explore';
 import Services from './../src/Pages/Services/Services'
-import AllServices from './Pages/Home/AllServices/AllServices';
+import Login from './Pages/Login/Login';
+import AuthProvider from './Context/AuthProvider/AuthProvider';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/explore">
-          <Explore></Explore>
-        </Route>
-        <Route path="/services">
-          <Services></Services>
-        </Route>
-        <Route path="/">
-          <Home></Home>
-        </Route>
-      </Switch>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/explore">
+            <Explore></Explore>
+          </Route>
+          <Route path="/services">
+            <Services></Services>
+          </Route>
 
-    </Router>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="/">
+            <Home></Home>
+          </Route>
+        </Switch>
+
+      </Router>
+    </AuthProvider>
   );
 }
 
