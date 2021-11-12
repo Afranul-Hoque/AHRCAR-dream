@@ -16,10 +16,10 @@ const Navigation = () => {
                     <div className="collapse navbar-collapse navbar-link" id="navbarScroll">
                         <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" >
                             <Link to="/home" className="   nav-link active">Home</Link>
-                            <Link to="/allService" className=" text-white nav-link ">Services</Link>
+                            <Link to="/explore" className=" text-white nav-link ">explore</Link>
 
 
-                            <Link to="/myorder" className=" text-white nav-link ">MyPackege</Link>
+                            <Link to="/services" className=" text-white nav-link ">Services</Link>
 
                             <Link to="/manageorder" className=" text-white nav-link ">Manage-Order</Link>
 

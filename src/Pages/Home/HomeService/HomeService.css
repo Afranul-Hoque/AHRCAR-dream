@@ -1,0 +1,13 @@
+.package{
+    font-weight: 500;
+    font-size: 2.5rem;
+    color:rgb(12, 14, 51);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.choose-package{
+    color: rgb(230, 102, 28);
+    font-size: 1.5rem;
+}
+.allService-section{
+    overflow: hidden;
+}

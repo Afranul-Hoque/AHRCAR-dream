@@ -1,0 +1,29 @@
+.cost{
+    color:rgb(20, 11, 97);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card-description{
+   
+    height: 40rem;
+}
+
+.image-size {
+    height:300px;
+}
+.card-title{
+    color: rgb(230, 102, 28);
+}
+.duration{
+    color:rgb(20, 11, 97);
+    font-weight: 500;
+}
+.details-button{
+    background-color: rgb(230, 102, 28);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding:5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
