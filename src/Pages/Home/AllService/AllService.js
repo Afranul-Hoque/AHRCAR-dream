@@ -19,7 +19,7 @@ const AllService = (props) => {
 
 
                     <div className=" mt-3">
-                        <Link to={`/booking/${_id}`}>
+                        <Link to={`/purchase/${_id}`}>
                             <button type="button" className=" details-button mt-2 py-2"> Purchase Now</button>
                         </Link>
                     </div>

@@ -13,6 +13,11 @@ import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import Register from './Pages/Register/Register';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Review from './Pages/Review/Review';
+import Navigation from './Pages/Sharing/Navigation/Navigation';
+import Footer from './Pages/Home/Footer/Footer';
+import NotFound from './Pages/NotFound/NotFound';
+import Purchase from './Pages/Purchase/Purchase/Purchase';
 
 function App() {
   return (
@@ -29,15 +34,32 @@ function App() {
             <Services></Services>
           </PrivateRoute>
 
+          <PrivateRoute path="/purchase/:purchaseId">
+            <Navigation></Navigation>
+            <Purchase></Purchase>
+            <Footer></Footer>
+          </PrivateRoute>
+
+          <PrivateRoute path="/review">
+            <Navigation></Navigation>
+            <Review></Review>
+            <Footer></Footer>
+          </PrivateRoute>
+
           <Route path="/login">
             <Login></Login>
           </Route>
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+
+
         </Switch>
 
       </Router>

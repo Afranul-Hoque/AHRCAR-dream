@@ -1,0 +1,31 @@
+.booking-section{
+    overflow: hidden;
+}
+.user-info{
+    color: rgb(230, 102, 28);
+}
+.fuel {
+    margin-left:1rem;
+}
+
+.submit-order{
+    background-color:rgb(230, 102, 28) ;
+    color: #fff;
+    border-radius: 5px;
+    border:none;
+    padding:5px 10px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.add-purchase form {
+    display:flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.add-purchase form input,textarea{
+    width:50%;
+    margin-bottom: 1rem;
+   
+}

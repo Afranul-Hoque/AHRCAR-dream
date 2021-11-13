@@ -1,0 +1,31 @@
+.achievement{
+    color: rgb(250, 249, 249);
+    font-size: 2.5rem;
+    
+}
+.Travel-us{
+
+    font-weight: 500;
+    font-size: 2.5rem;
+    color:rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.icons{
+    font-size: 4rem;
+    padding:.5rem ;
+    color:rgba(255, 255, 0, 0.952);
+}
+.achieves{
+    color:rgba(255, 255, 0, 0.952);
+}
+
+.achivement-section{
+    background-image: url('../../../Images/image6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 0rem;
+    
+    background-color: aqua;
+    
+    background-position: center;
+}

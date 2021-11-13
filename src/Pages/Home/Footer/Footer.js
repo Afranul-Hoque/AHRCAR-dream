@@ -4,7 +4,7 @@ import payments from '../../../Images/money.jpg'
 
 const Footer = () => {
     return (
-        <div className="mt-5 footer-section py-5 px-5">
+        <div className=" footer-section py-5 px-5">
             <div className="row pt-3">
 
                 <div className="col-md-4">

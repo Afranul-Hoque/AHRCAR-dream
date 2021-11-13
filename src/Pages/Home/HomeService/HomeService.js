@@ -13,8 +13,8 @@ const HomeService = () => {
         <div className="allService-section">
             <div className=" my-5 pb-4">
                 <div className="mb-5 text-center">
-                    <h5 className="choose-package">Our Amazing Services</h5>
-                    <h3 className="package">Select your Dream car</h3>
+                    <h5 className="choose-carservice">Our Amazing Services</h5>
+                    <h3 className="carservice">Select your Dream car</h3>
                 </div>
 
                 <div className="row row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
