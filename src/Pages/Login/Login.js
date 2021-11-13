@@ -9,7 +9,7 @@ import useAuth from '../../Hooks/useAuth';
 const Login = () => {
 
     const [loginData, setLoginData] = useState({})
-    const { user, isloding, loginUser, authError, signInWithGoogle } = useAuth()
+    const { user, isloding, loginUser, authError } = useAuth()
 
     const location = useLocation();
     const history = useHistory();
@@ -25,16 +25,12 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        alert('Submitted form successfully');
+
         loginUser(loginData.email, loginData.password, location, history)
         e.preventDefault();
     }
 
-    const handleGoogleSignIn = () => {
-        signInWithGoogle();
 
-
-    }
 
     return (
         <div className="container">
@@ -74,6 +70,22 @@ const Login = () => {
 
                     <Link to="/register" className="  nav-link "> New User? Please Register Here</Link>
 
+                    {
+                        isloding && <div className="spinner-border text-primary" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    }
+                    {
+                        user?.email && <div className="alert alert-info error-control" role="alert">
+                            Login user successfully!
+                        </div>
+                    }
+
+                    {
+                        authError && <div className="alert alert-danger error-control" role="alert">
+                            {authError}
+                        </div>
+                    }
 
                 </div>
 

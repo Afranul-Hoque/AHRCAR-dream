@@ -16,43 +16,47 @@ const useFirebase = () => {
 
 
     const registerUser = (email, password, name, location, history) => {
+        setIsloding(true);
         createUserWithEmailAndPassword(auth, email, password)
 
             .then((userCredential) => {
-
-                const user = userCredential.user;
-                // ...
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setAuthError('');
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });
+                setAuthError(error.message);
+            })
+            .finally(() => setIsloding(false));
     }
 
     // logout funtcion
 
     const logOut = () => {
+        setIsloding(true);
         signOut(auth).then(() => {
-            // Sign-out successful.
         }).catch((error) => {
-            // An error happened.
-        });
+
+        })
+            .finally(() => setIsloding(false));
     }
 
 
 
     // signin athentication
 
-    const loginUser = (email, password) => {
+    const loginUser = (email, password, location, history) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setAuthError('');
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
+                setAuthError(error.message);
+
+            })
+            .finally(() => setIsloding(false));
     }
 
 
@@ -71,6 +75,7 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setIsloding(false)
         });
         return () => unsubscribe;
 
@@ -82,7 +87,9 @@ const useFirebase = () => {
         user,
         registerUser,
         logOut,
-        loginUser
+        loginUser,
+        isloding,
+        authError,
     }
 
 }

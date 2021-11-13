@@ -5,9 +5,9 @@ import useAuth from '../../../Hooks/useAuth'
 
 
 const Navigation = () => {
-    // const { user } = useAuth();
 
     const { user, logOut } = useAuth();
+    console.log(user)
     return (
         <div className="navigation-section">
 
@@ -27,15 +27,11 @@ const Navigation = () => {
 
                             <Link to="/manageorder" className=" text-white nav-link ">Manage-Order</Link>
 
-                            {/* <Link to="/login" className=" text-white nav-link ">Login</Link> */}
 
-                            {/* {
-                                user.email && <span><Link to="/home" className="nav-link active">{user.displayName}</Link></span>
-                            } */}
 
                             {
                                 user?.email ?
-                                    <Link to="/home" className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
+                                    <Link to="/home" onClick={logOut} className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
 
                                     :
                                     <Link to="/login" className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Login</Link>

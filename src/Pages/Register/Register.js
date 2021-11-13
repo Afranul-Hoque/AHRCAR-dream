@@ -29,7 +29,6 @@ const Register = () => {
             alert('Your password did not match')
             return;
         }
-        alert('Submitted form successfully')
         registerUser(loginData.email, loginData.password, loginData.name, location, history)
         e.preventDefault();
     }
@@ -40,7 +39,7 @@ const Register = () => {
                 <h3>Please Register Here</h3>
             </div>
 
-            <form onSubmit={handleLoginSubmit}>
+            {!isloding && <form onSubmit={handleLoginSubmit}>
                 <div className="mb-3">
                     <input onBlur={handleOnBlur} placeholder="Enter your Name" type="name" className="form-control" name="name" id="exampleInputName" aria-describedby="emailHelp" />
 
@@ -55,7 +54,27 @@ const Register = () => {
                 </div>
 
                 <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            </form>}
+            {
+                isloding && <div className="spinner-border text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            }
+            {
+                user?.email && <div className="alert alert-info error-control" role="alert">
+                    Created user successfully!
+                </div>
+            }
+
+            {
+                authError && <div className="alert alert-danger error-control" role="alert">
+                    {authError}
+                </div>
+            }
+
+
+
+
             <Link to="/login" className="  nav-link "> Already Register? Please Login Here</Link>
         </div>
     );
