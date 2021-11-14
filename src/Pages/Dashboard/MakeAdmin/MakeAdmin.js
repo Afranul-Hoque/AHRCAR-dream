@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     const handleAdmin = e => {
         const user = { email };
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://polar-reef-74830.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Getting Started with AHRCAR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using react [AHRCAR (international Car Company)](https://ahrcar-e7a67.web.app/).
 
-## Available Scripts
+## About us
 
-In the project directory, you can run:
+AHRCAR is a Car selling company in this world. We sell cars online and offline for our customers. We give many offers and coupons to our customers. Our company sells all categories car because we know there are lot of people have different capacity.
 
-### `yarn start`
+### `Contact for upcoming New Car`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We are add some features in our website. where you see upcoming new car. And if you want , you will booking when you want. Our Agent always ready to talk with you. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Why you choose us?`
 
-### `yarn test`
+We give you some extra services .
+1. First 1 year we give free service if you see any problem in car.
+2. Our agent are describe everything about a car which are very helful for choosing a best car. 
+3. You will give 50% money first time and if you want , you will pay monthly without interest.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Our services area`
 
-### `yarn build`
+Europe, America and Asian 100 countris our agent are ready for you. But if you need emergency you will contact our head office ( contact information in website footer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Our target`
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Our first and main target is fulfill your dream. We always want to give you best car which are your dream car.For any query, please contact us.

@@ -7,7 +7,7 @@ import './AllServices.css'
 const AllServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://polar-reef-74830.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

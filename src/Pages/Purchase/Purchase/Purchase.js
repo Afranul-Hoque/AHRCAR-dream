@@ -14,7 +14,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cars/${purchaseId}`)
+        fetch(`https://polar-reef-74830.herokuapp.com/cars/${purchaseId}`)
             .then(res => res.json())
             .then(data => setPurchases(data))
     }, [purchaseId])
@@ -23,7 +23,7 @@ const Purchase = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/clients', data)
+        axios.post('https://polar-reef-74830.herokuapp.com/clients', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Purchase form submit successfully');

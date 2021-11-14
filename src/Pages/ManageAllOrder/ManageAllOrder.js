@@ -6,7 +6,7 @@ const ManageAllOrder = () => {
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/clients')
+        fetch('https://polar-reef-74830.herokuapp.com/clients')
             .then(res => res.json())
             .then(data => setOrders(data.slice(0, 6)));
     }, [])
