@@ -27,11 +27,18 @@ const Navigation = () => {
 
                             <Link to="/review" className=" text-white nav-link ">Review</Link>
 
+                            {/* <Link to="/dashboard" className=" text-white nav-link ">Dashboard</Link> */}
+
 
 
                             {
                                 user?.email ?
-                                    <Link to="/home" onClick={logOut} className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
+                                    <>
+                                        <Link to="/dashboard" className=" text-white nav-link ">Dashboard</Link>
+
+                                        <Link to="/home" onClick={logOut} className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
+                                    </>
+
 
                                     :
                                     <Link to="/login" className="text-white   nav-link "> <i className="fas fa-user pe-1"></i>Login</Link>

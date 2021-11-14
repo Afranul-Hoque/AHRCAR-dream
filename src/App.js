@@ -18,6 +18,7 @@ import Navigation from './Pages/Sharing/Navigation/Navigation';
 import Footer from './Pages/Home/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase/Purchase';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
           </Route>
           <PrivateRoute path="/services">
             <Services></Services>
+          </PrivateRoute>
+
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
           </PrivateRoute>
 
           <PrivateRoute path="/purchase/:purchaseId">

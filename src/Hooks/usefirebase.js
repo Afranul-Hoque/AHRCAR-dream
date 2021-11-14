@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 import initializeFirebase from "../Pages/Firebase/Firebase.init";
 
@@ -13,6 +13,7 @@ const useFirebase = () => {
     const auth = getAuth();
     const [isloding, setIsloding] = useState(true);
     const [authError, setAuthError] = useState('');
+    const [admin, setAdmin] = useState(false);
 
 
     const registerUser = (email, password, name, location, history) => {
@@ -20,6 +21,18 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
 
             .then((userCredential) => {
+
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                saveUser(email, name);
+
+                updateProfile(auth.currentUser, {
+                    displayName: name
+
+                }).then(() => {
+                }).catch((error) => {
+                });
+
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
                 setAuthError('');
@@ -59,7 +72,11 @@ const useFirebase = () => {
             .finally(() => setIsloding(false));
     }
 
-
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
 
 
 
@@ -83,8 +100,23 @@ const useFirebase = () => {
 
 
 
+
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName };
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        })
+    }
+
+
     return {
         user,
+        admin,
         registerUser,
         logOut,
         loginUser,
