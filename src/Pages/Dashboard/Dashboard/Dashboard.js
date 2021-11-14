@@ -25,11 +25,12 @@ const Dashboard = () => {
 
     return (
 
-        <div>
+        <div className="dashboard-section">
             <div className="navigation-section">
                 <nav className="navbar navbar-expand-lg navbar-dark    ">
                     <div className="container-fluid">
-                        <Link to="/home" className="nav-link active company-name"> Dashboard</Link>
+                        <Link to="/home" className="nav-link active company-name"> AHRCAR</Link>
+                        <Link to="/dashboard" className="nav-link active company-name"> Dashboard</Link>
                         <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon  "></span>
                         </button>
@@ -37,9 +38,9 @@ const Dashboard = () => {
                             <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" >
 
 
-                                <Link to="/home" className="   nav-link active">Home</Link>
+                                <Link to="/home" className="pe-5   nav-link active">Home</Link>
 
-                                <Link to={`${url}`} className="   nav-link active">Dashboard</Link>
+
 
 
 

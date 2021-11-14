@@ -4,3 +4,6 @@
     border-right:2px solid gray;
    
 }
+.dashboard-section{
+    overflow: hidden;
+}

@@ -7,7 +7,7 @@ import useAuth from '../../../Hooks/useAuth'
 const Navigation = () => {
 
     const { user, logOut } = useAuth();
-    console.log(user)
+
     return (
         <div className="navigation-section">
 
@@ -20,7 +20,7 @@ const Navigation = () => {
                     <div className="collapse navbar-collapse navbar-link" id="navbarScroll">
                         <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" >
                             <Link to="/home" className="   nav-link active">Home</Link>
-                            <Link to="/explore" className=" text-white nav-link ">explore</Link>
+
 
 
                             <Link to="/services" className=" text-white nav-link ">Services</Link>
