@@ -8,14 +8,20 @@ import {
     useRouteMatch
 } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth';
+import AdminRoute from '../../AdminRoute/AdminRoute';
 import Explore from '../../Explore/Explore';
+import ManageAllOrder from '../../ManageAllOrder/ManageAllOrder';
+import MyOrders from '../../MyOrders/MyOrders';
+import Payment from '../../Payment/Payment';
+import Review from '../../Review/Review';
+import AddNewProduct from '../AddNewProduct/AddNewProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import ManageProducts from '../ManageProdcuts/ManageProducts';
+import ManageProducts from '../ManageProducts/ManageProducts';
 import './Dashboard.css'
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logOut } = useAuth();
 
     return (
 
@@ -57,17 +63,24 @@ const Dashboard = () => {
                 {/* dashboard sidevar */}
                 <div className="col-md-3 sidebar-section ps-5">
 
-                    <div>
-                        <Link to={`${url}/makeadmin`} className="   nav-link active">makeadmin</Link>
-                    </div>
 
                     {
-                        admin && <>
+                        !admin && <>
+
                             <div>
-                                <Link to={`${url}/ManageProduct`} className="   nav-link active">ManageProducts</Link>
+                                <Link to={`${url}/myorders`} className="   nav-link active">My-Orders</Link>
                             </div>
                             <div>
-                                <Link to={`${url}/ManageProduct`} className="   nav-link active">ManagePro</Link>
+                                <Link to={`${url}/review`} className="   nav-link active">review</Link>
+                            </div>
+                            <div>
+                                <Link to={`${url}/payment`} className="   nav-link active">payment</Link>
+                            </div>
+
+
+
+                            <div>
+                                <Link to="/home" onClick={logOut} className=" nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
                             </div>
 
                         </>
@@ -76,9 +89,27 @@ const Dashboard = () => {
 
 
 
+                    {
+                        admin && <>
 
+                            <div>
+                                <Link to={`${url}/manageallorder`} className="   nav-link active">Manage All Orders</Link>
+                            </div>
+                            <div>
+                                <Link to={`${url}/addnewproduct`} className="   nav-link active">Add New Product</Link>
+                            </div>
+                            <div>
+                                <Link to={`${url}/makeadmin`} className="   nav-link active">Make New-Admin</Link>
+                            </div>
+                            <div>
+                                <Link to={`${url}/manageproducts`} className="   nav-link active">Manage Products</Link>
+                            </div>
+                            <div>
+                                <Link to="/home" onClick={logOut} className=" nav-link "> <i className="fas fa-user pe-1"></i>Log out</Link>
+                            </div>
 
-
+                        </>
+                    }
 
                 </div>
 
@@ -99,16 +130,33 @@ const Dashboard = () => {
                 <div className="col-md-9">
 
                     <Switch>
-                        <Route exact path={path}>
-                            <Explore></Explore>
-                        </Route>
-                        <Route path={`${path}/makeadmin`}>
+
+                        <AdminRoute path={`${path}/makeadmin`}>
                             <MakeAdmin></MakeAdmin>
+                        </AdminRoute>
+
+                        <AdminRoute path={`${path}/manageallorder`}>
+                            <ManageAllOrder></ManageAllOrder>
+                        </AdminRoute>
+
+                        <AdminRoute path={`${path}/addnewproduct`}>
+                            <AddNewProduct></AddNewProduct>
+                        </AdminRoute>
+
+                        <AdminRoute path={`${path}/manageproducts`}>
+                            <ManageProducts></ManageProducts>
+                        </AdminRoute>
+
+                        <Route path={`${path}/review`}>
+                            <Review></Review>
+                        </Route>
+                        <Route path={`${path}/payment`}>
+                            <Payment></Payment>
+                        </Route>
+                        <Route path={`${path}/myorders`}>
+                            <MyOrders></MyOrders>
                         </Route>
 
-                        <Route path={`${path}/ManageProduct`}>
-                            <ManageProducts></ManageProducts>
-                        </Route>
                     </Switch>
                 </div>
 

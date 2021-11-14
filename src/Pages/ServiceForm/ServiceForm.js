@@ -23,8 +23,8 @@ const ServiceForm = () => {
     return (
         <div>
             <div>
-                <div className="add-service  ">
-                    <h3 className="mb-4 text-center">Add  New Service</h3>
+                <div className="add-service  mt-5">
+                    <h3 className="mb-4 text-center">Add  New Product</h3>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input {...register("Brandname", { required: true, maxLength: 50 })} placeholder="Brandname" />
@@ -40,7 +40,7 @@ const ServiceForm = () => {
                         <input {...register("color", { required: true, maxLength: 20 })} placeholder="color" />
 
 
-                        <button type="submit" className="submit-order mt-2">Place New Order</button>
+                        <button type="submit" className="add-product mt-2">Add New Product</button>
                     </form>
 
                 </div>
