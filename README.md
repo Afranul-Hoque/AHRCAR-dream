@@ -15,6 +15,9 @@ AHRCAR is a Car selling company in this world. We sell cars online and offline f
   admin@admin.com , password:123456)
 * The user will see all products if he login the website otherwise he will see some products.
 
+### `Technology`
+React, Bootstrap, Firebase, hook-form, MongoDB, Heroku, Express, Node js
+
 ### `Why you choose us?`
 
 We give you some extra services .
