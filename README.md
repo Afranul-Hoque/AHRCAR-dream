@@ -6,9 +6,14 @@ This project was created using react [AHRCAR (international Car Company)](https:
 
 AHRCAR is a Car selling company in this world. We sell cars online and offline for our customers. We give many offers and coupons to our customers. Our company sells all categories car because we know there are lot of people have different capacity.
 
-### `Contact for upcoming New Car`
+### `Key Features`
 
-We are add some features in our website. where you see upcoming new car. And if you want , you will booking when you want. Our Agent always ready to talk with you. 
+* Dashboard has different functionality for users and admin. A user will see his own order 
+  and give a review if he wants. 
+* Firebase Authentication(Email, Password). All data is saved in MongoDB.
+* Admin can add or delete Products. Admin can make a user to admin.(Email:
+  admin@admin.com , password:123456)
+* The user will see all products if he login the website otherwise he will see some products.
 
 ### `Why you choose us?`
 
